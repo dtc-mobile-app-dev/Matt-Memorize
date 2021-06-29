@@ -9,9 +9,36 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        HStack {
+            ZStack {
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(lineWidth: 3)
+                Text("Hello!")
+            }
+            ZStack {
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(lineWidth: 3)
+                Text("Hello!")
+            }
+            ZStack {
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(lineWidth: 3)
+                Text("Hello!")
+            }
+            ZStack {
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(lineWidth: 3)
+                Text("Hello!")
+            }
+        }
+            .padding(.horizontal)
+            .foregroundColor(.red)
     }
+}
+
+struct CardView {
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
