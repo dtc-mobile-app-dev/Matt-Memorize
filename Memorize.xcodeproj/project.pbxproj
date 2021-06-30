@@ -11,6 +11,7 @@
 		EF9C4849268B84CB00CF9C28 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C4848268B84CB00CF9C28 /* ContentView.swift */; };
 		EF9C484B268B84CC00CF9C28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9C484A268B84CC00CF9C28 /* Assets.xcassets */; };
 		EF9C484E268B84CC00CF9C28 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9C484D268B84CC00CF9C28 /* Preview Assets.xcassets */; };
+		EFB7C3CA268CE14E004E192D /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB7C3C9268CE14E004E192D /* MemoryGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		EF9C484A268B84CC00CF9C28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF9C484D268B84CC00CF9C28 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EF9C484F268B84CC00CF9C28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFB7C3C9268CE14E004E192D /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				EF9C4846268B84CB00CF9C28 /* MemorizeApp.swift */,
 				EF9C4848268B84CB00CF9C28 /* ContentView.swift */,
+				EFB7C3C9268CE14E004E192D /* MemoryGame.swift */,
 				EF9C484A268B84CC00CF9C28 /* Assets.xcassets */,
 				EF9C484F268B84CC00CF9C28 /* Info.plist */,
 				EF9C484C268B84CC00CF9C28 /* Preview Content */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB7C3CA268CE14E004E192D /* MemoryGame.swift in Sources */,
 				EF9C4849268B84CB00CF9C28 /* ContentView.swift in Sources */,
 				EF9C4847268B84CB00CF9C28 /* MemorizeApp.swift in Sources */,
 			);
