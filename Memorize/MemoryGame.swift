@@ -8,12 +8,13 @@
 import Foundation
 
 struct MemoryGame<CardContent> {
+    
     private(set) var cards: Array<Card>
-    func choose(_ card: Card) {
+    
+    mutating func choose(_ card: Card) {
         let chosenIndex = index(of: card)
-        var chosenCard = cards[chosenIndex]
-        chosenCard.isFaceUp.toggle()
-        print("chosenCard = \(chosenCard)")
+        cards[chosenIndex].isFaceUp.toggle()
+        print("\(cards)")
     }
 
     func index(of card: Card) -> Int {
