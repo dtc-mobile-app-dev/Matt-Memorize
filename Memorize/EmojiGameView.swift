@@ -12,19 +12,21 @@ struct EmojiGameView: View {
     
     var body: some View {
         VStack {
-            ScrollView {
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 65))]) {
-                    ForEach(game.cards) { card in
-                        CardView(card: card)
-                        .aspectRatio(2/3, contentMode: .fit)
-                        .onTapGesture {
-                            game.choose(card)
-                        }
-                    }
+//            ScrollView {
+//                LazyVGrid(columns: [GridItem(.adaptive(minimum: 65))]) {
+//                    ForEach(game.cards) { card in
+            AspectVGrid(items: game.cards, aspectRatio: 2/3, content: { card in
+                CardView(card: card)
+                .aspectRatio(2/3, contentMode: .fit)
+                .onTapGesture {
+                    game.choose(card)
                 }
-            }
+            })
+                        
+//                    }
+//                }
+//            }
             .foregroundColor(.red)
-            .font(.largeTitle)
             .padding(.horizontal)
         }
             .padding(.horizontal)
