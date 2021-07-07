@@ -16,10 +16,14 @@ struct EmojiGameView: View {
 //                LazyVGrid(columns: [GridItem(.adaptive(minimum: 65))]) {
 //                    ForEach(game.cards) { card in
             AspectVGrid(items: game.cards, aspectRatio: 2/3, content: { card in
-                CardView(card: card)
-                .aspectRatio(2/3, contentMode: .fit)
-                .onTapGesture {
-                    game.choose(card)
+                if card.isMatched && !card.isFaceUp {
+                    Rectangle().opacity(0)
+                } else {
+                    CardView(card: card)
+                        .padding(4)
+                        .onTapGesture {
+                            game.choose(card)
+                        }
                 }
             })
                         
