@@ -40,22 +40,16 @@ struct CardView: View {
     let card: MemoryGame<String>.Card
     
     var body: some View {
-        GeometryReader(content: { geometry in
+        GeometryReader { geometry in
             ZStack {
-                let shape = RoundedRectangle(cornerRadius: DrawingConstants.cornerRadius)
-                if card.isFaceUp {
-                    shape.fill().foregroundColor(.white)
-                    shape.strokeBorder(lineWidth: DrawingConstants.lineWidth)
-                    Pie(startAngle: Angle(degrees: 0-90), endAngle: Angle(degrees: 110-90)).padding(5).opacity(0.5)
-                    Text(card.content).font(font(in: geometry.size))
-                } else if card.isMatched {
-                    shape.opacity(0)
+                    Pie(startAngle: Angle(degrees: 0-90), endAngle: Angle(degrees: 110-90))
+                        .padding(5)
+                        .opacity(0.5)
+                    Text(card.content).font(Memorize.font(in: geometry.size))
                 }
-                else {
-                    shape.fill()
-                }
+            .modifier(Cardify(isFaceUp: card.isFaceUp))
             }
-        })
+        }
     }
     
     private func font(in size: CGSize) -> Font {
@@ -63,12 +57,9 @@ struct CardView: View {
     }
     
     private struct DrawingConstants {
-        static let cornerRadius: CGFloat = 10
-        static let lineWidth: CGFloat = 3
         static let fontScale: CGFloat = 0.65
         static let circlePadding: CGFloat = 4
     }
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
