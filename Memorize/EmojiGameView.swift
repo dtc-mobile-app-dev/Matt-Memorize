@@ -12,25 +12,29 @@ struct EmojiGameView: View {
     
     var body: some View {
         VStack {
-            AspectVGrid(items: game.cards, aspectRatio: 2/3, content: { card in
-                cardView(for: card)
-            })
-            .foregroundColor(.red)
-            .padding(.horizontal)
+            gameBody
+            shuffle
         }
-            .padding(.horizontal)
+            .padding()
     }
     
-    @ViewBuilder
-    private func cardView(for card: EmojiMemoryGame.Card) -> some View {
-        if card.isMatched && !card.isFaceUp {
-            Rectangle().opacity(0)
-        } else {
-            CardView(card: card)
-                .padding(4)
-                .onTapGesture {
-                    game.choose(card)
-                }
+    var gameBody: some View {
+        AspectVGrid(items: game.cards, aspectRatio: 2/3, content: { card in
+            if card.isMatched && !card.isFaceUp {
+                Rectangle().opacity(0)
+            } else {
+                CardView(card: card)
+                    .padding(4)
+                    .onTapGesture {
+                        game.choose(card)
+                    }
+            }
+        })
+        .foregroundColor(.red)
+    }
+    var shuffle: some View {
+        Button("Shuffle") {
+            game.shuffle()
         }
     }
 }
