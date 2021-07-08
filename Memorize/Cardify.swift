@@ -21,6 +21,7 @@ struct Cardify: ViewModifier {
                 shape.fill()
             }
             content
+                .opacity(isFaceUp ? 1 : 0)
         }
     }
     
