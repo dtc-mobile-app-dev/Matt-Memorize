@@ -124,7 +124,7 @@ struct CardView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                    Pie(startAngle: Angle(degrees: 0-90), endAngle: Angle(degrees: 110-90))
+                Pie(startAngle: Angle(degrees: 0-90), endAngle: Angle(degrees: (1 - card.bonusRemaining) * 360 - 90))
                         .padding(5)
                         .opacity(0.5)
                     Text(card.content)
@@ -140,8 +140,7 @@ struct CardView: View {
     private func scale(thatFits size: CGSize) -> CGFloat {
         min(size.width, size.height) / (DrawingConstants.fontSize / DrawingConstants.fontScale)
     }
-    
-    }
+}
     
     private func font(in size: CGSize) -> Font {
         Font.system(size: min(size.width, size.height) * DrawingConstants.fontScale)
