@@ -13,6 +13,11 @@ struct Cardify: AnimatableModifier {
         rotation = isFaceUp ? 0 : 180
     }
     
+    var animatableData: Double {
+        get { rotation }
+        set { rotation = newValue }
+    }
+    
     var rotation: Double
     
     func body(content: Content) -> some View {
@@ -27,7 +32,7 @@ struct Cardify: AnimatableModifier {
             content
                 .opacity(rotation < 90 ? 1 : 0)
         }
-        .rotation3DEffect(Angle.degrees(isFaceUp ? 0 : 180), axis: (0, 1, 0))
+        .rotation3DEffect(Angle.degrees(rotation), axis: (0, 1, 0))
     }
     
     private struct DrawingConstants {
