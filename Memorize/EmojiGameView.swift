@@ -121,6 +121,8 @@ struct EmojiGameView: View {
 struct CardView: View {
     let card: MemoryGame<String>.Card
     
+    @State private var animatedBonusRemaining: Double = 0
+    
     var body: some View {
         GeometryReader { geometry in
             ZStack {
