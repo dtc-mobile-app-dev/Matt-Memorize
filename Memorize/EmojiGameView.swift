@@ -13,7 +13,7 @@ struct EmojiGameView: View {
     @Namespace private var dealingNameSpace
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .bottom) {
             VStack {
                 gameBody
                 HStack {
@@ -25,7 +25,7 @@ struct EmojiGameView: View {
             }
             deckBody
         }
-                .padding()
+        .padding()
     }
     
     @State private var dealt = Set<Int>()
