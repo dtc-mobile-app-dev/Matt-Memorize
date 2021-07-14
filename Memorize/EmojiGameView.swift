@@ -13,12 +13,19 @@ struct EmojiGameView: View {
     @Namespace private var dealingNameSpace
     
     var body: some View {
-        VStack {
-            gameBody
+        ZStack {
+            VStack {
+                gameBody
+                HStack {
+                    restart
+                    Spacer()
+                    shuffle
+                }
+                .padding(.horizontal)
+            }
             deckBody
-            shuffle
         }
-            .padding()
+                .padding()
     }
     
     @State private var dealt = Set<Int>()
@@ -31,6 +38,18 @@ struct EmojiGameView: View {
         !dealt.contains(card.id)
     }
     
+    private func dealAnimation(for card: EmojiMemoryGame.Card) -> Animation {
+        var delay = 0.0
+        if let index = game.cards.firstIndex(where: { $0.id == card.id }) {
+            delay = Double(index) *  (CardConstants.totalDealDuration / Double(game.cards.count))
+        }
+        return Animation.easeInOut(duration: CardConstants.dealDuration).delay(delay)
+    }
+    
+    private func zIndex(of card: EmojiMemoryGame.Card) -> Double {
+        -Double(game.cards.firstIndex(where: { $0.id == card.id }) ?? 0)
+    }
+    
     var gameBody: some View {
         AspectVGrid(items: game.cards, aspectRatio: 2/3) { card in
             if isUndealt(card) || card.isMatched && !card.isFaceUp {
@@ -40,6 +59,7 @@ struct EmojiGameView: View {
                     .matchedGeometryEffect(id: card.id, in: dealingNameSpace)
                     .padding(4)
                     .transition(AnyTransition.asymmetric(insertion: .identity, removal: .scale))
+                    .zIndex(zIndex(of: card))
                     .onTapGesture {
                         withAnimation {
                             game.choose(card)
@@ -56,15 +76,16 @@ struct EmojiGameView: View {
                 CardView(card: card)
                     .matchedGeometryEffect(id: card.id, in: dealingNameSpace)
                     .transition(AnyTransition.asymmetric(insertion: .opacity, removal: .identity))
+                    .zIndex(zIndex(of: card))
             }
         }
         .frame(width: CardConstants.undealtWidth, height: CardConstants.undealtHeight)
         .foregroundColor(CardConstants.color)
         .onTapGesture {
-            withAnimation {
-                for card in game.cards {
-                    deal(card)
-                }
+            for card in game.cards {
+                withAnimation(dealAnimation(for: card)) {
+                        deal(card)
+                    }
             }
         }
     }
@@ -73,6 +94,15 @@ struct EmojiGameView: View {
         Button("Shuffle") {
             withAnimation {
                 game.shuffle()
+            }
+        }
+    }
+    
+    var restart: some View {
+        Button("Restart") {
+            withAnimation {
+                dealt = []
+                game.restart()
             }
         }
     }
