@@ -15,6 +15,7 @@ struct EmojiGameView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack {
+                title
                 gameBody
                 HStack {
                     restart
@@ -107,6 +108,10 @@ struct EmojiGameView: View {
         }
     }
     
+    var title: some View {
+        Text("Memorize")
+    }
+    
     private struct CardConstants {
         static let color = Color.red
         static let aspectRatio: CGFloat = 2/3
@@ -129,6 +134,12 @@ struct CardView: View {
                 Group {
                 if card.isConsumingBonusTime {
                     Pie(startAngle: Angle(degrees: 0-90), endAngle: Angle(degrees: (1 - animatedBonusRemaining) * 360 - 90))
+                        .onAppear {
+                            animatedBonusRemaining = card.bonusRemaining
+                            withAnimation(.linear(duration: card.bonusTimeRemaining)) {
+                                animatedBonusRemaining = 0
+                            }
+                        }
                 } else {
                     Pie(startAngle: Angle(degrees: 0-90), endAngle: Angle(degrees: (1 - card.bonusRemaining) * 360 - 90))
                     }
