@@ -100,7 +100,7 @@ struct EmojiGameView: View {
     }
     
     var restart: some View {
-        Button("Restart") {
+        Button("New Game") {
             withAnimation {
                 dealt = []
                 game.restart()
