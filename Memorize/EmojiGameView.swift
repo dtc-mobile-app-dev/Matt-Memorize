@@ -122,7 +122,6 @@ struct EmojiGameView: View {
     }
 }
 
-
 struct CardView: View {
     let card: MemoryGame<String>.Card
     
