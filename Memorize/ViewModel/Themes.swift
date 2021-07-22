@@ -15,3 +15,9 @@ struct Themes <Element> {
     ["🎶", "🪘", "🪗", "🎷", "🎻", "🎺", "🎹", "🥁", "🎸", "🎤", "🎵", "🎼"], pairsOfCards: 12, themeName: "Music", color: "orange"
     ["💽", "💾", "📞", "☎️", "📽", "📹", "📼", "📠", "📟", "🕹", "🖲", "💿"], pairsOfCards: 12, themeName: "Tech", color: "purple"
 }
+
+// if ContentCount <= pairsOfCards {
+// return pairsOfCards == ContentCount
+// }
+
+
