@@ -8,12 +8,12 @@
 import Foundation
 
 struct Themes <Element> {
-    ["✈️", "🚀", "🚂", "🏎", "🛺", "🚜", "🛵", "🚟", "🚌", "🚕", "🚲", "🛴"], pairsOfCards: 10, themeName: "Vehicles", color: "red"
-    ["🍆", "🥦", "🧅", "🥔", "🌽", "🥕", "🫑", "🍅", "🧄", "🍠", "🥬", "🥒"], pairsOfCards: 12, themeName: "Veggies", color: "green"
-    ["⚽️", "🏈", "🎾", "⚾️", "🏐", "🏓", "🥍", "🥏", "🏀", "🏏", "🏒", "🤺"], pairsOfCards: 12, themeName: "Sports", color: "blue"
-    ["🥐", "🥯", "🍞", "🥖", "🥨", "🧇", "🥞", "🫓", "🥪", "🍕", "🍩", "🍪"], pairsOfCards: 12, themeName: "Delicious Bread", color: "yellow"
-    ["🎶", "🪘", "🪗", "🎷", "🎻", "🎺", "🎹", "🥁", "🎸", "🎤", "🎵", "🎼"], pairsOfCards: 12, themeName: "Music", color: "orange"
-    ["💽", "💾", "📞", "☎️", "📽", "📹", "📼", "📠", "📟", "🕹", "🖲", "💿"], pairsOfCards: 12, themeName: "Tech", color: "purple"
+    ["✈️", "🚀", "🚂", "🏎", "🛺", "🚜", "🛵", "🚟", "🚌", "🚕", "🚲", "🛴"], numberOfPairsOfCards: 10, themeName: "Vehicles", color: "red"
+    ["🍆", "🥦", "🧅", "🥔", "🌽", "🥕", "🫑", "🍅", "🧄", "🍠", "🥬", "🥒"], numberOfPairsOfCards: 12, themeName: "Veggies", color: "green"
+    ["⚽️", "🏈", "🎾", "⚾️", "🏐", "🏓", "🥍", "🥏", "🏀", "🏏", "🏒", "🤺"], numberOfPairsOfCards: 12, themeName: "Sports", color: "blue"
+    ["🥐", "🥯", "🍞", "🥖", "🥨", "🧇", "🥞", "🫓", "🥪", "🍕", "🍩", "🍪"], numberOfPairsOfCards: 12, themeName: "Delicious Bread", color: "yellow"
+    ["🎶", "🪘", "🪗", "🎷", "🎻", "🎺", "🎹", "🥁", "🎸", "🎤", "🎵", "🎼"], numberOfPairsOfCards: 12, themeName: "Music", color: "orange"
+    ["💽", "💾", "📞", "☎️", "📽", "📹", "📼", "📠", "📟", "🕹", "🖲", "💿"], numberOfPairsOfCards: 12, themeName: "Tech", color: "purple"
 }
 
 // if ContentCount <= pairsOfCards {
