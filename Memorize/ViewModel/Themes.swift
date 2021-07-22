@@ -9,7 +9,7 @@ import Foundation
 
 struct Themes <Element> {
     ["✈️", "🚀", "🚂", "🏎", "🛺", "🚜", "🛵", "🚟", "🚌", "🚕", "🚲", "🛴"], numberOfPairsOfCards: 10, themeName: "Vehicles", color: "red"
-    ["🍆", "🥦", "🧅", "🥔", "🌽", "🥕", "🫑", "🍅", "🧄", "🍠", "🥬", "🥒"], numberOfPairsOfCards: 12, themeName: "Veggies", color: "green"
+    ["🍆", "🥦", "🧅", "🥔", "🌽", "🥕", "🫑", "🍅", "🧄", "🍠", "🥬", "🥒"], numberOfPairsOfCards: 14, themeName: "Veggies", color: "green"
     ["⚽️", "🏈", "🎾", "⚾️", "🏐", "🏓", "🥍", "🥏", "🏀", "🏏", "🏒", "🤺"], numberOfPairsOfCards: 12, themeName: "Sports", color: "blue"
     ["🥐", "🥯", "🍞", "🥖", "🥨", "🧇", "🥞", "🫓", "🥪", "🍕", "🍩", "🍪"], numberOfPairsOfCards: 12, themeName: "Delicious Bread", color: "yellow"
     ["🎶", "🪘", "🪗", "🎷", "🎻", "🎺", "🎹", "🥁", "🎸", "🎤", "🎵", "🎼"], numberOfPairsOfCards: 12, themeName: "Music", color: "orange"
