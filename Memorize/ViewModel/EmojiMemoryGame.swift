@@ -30,7 +30,7 @@ class EmojiMemoryGame: ObservableObject {
     private(set) var theme: Theme<String>
     
     init() {
-        theme = Themes.themes[0]! //this assumes there is at least 1 entry in the Dict
+        theme = Themes.themes[pickThemeId()]! //this assumes there is at least 1 entry in the Dict
         model = Self.createMemoryGame(theme: theme)
     }
     
@@ -55,5 +55,9 @@ class EmojiMemoryGame: ObservableObject {
     func pickThemeId() -> Int {
         let numChoices = Themes.themes.count
         return Int.random(in: 0..<numChoices)
+    }
+    
+    func getRandomTheme() {
+        
     }
 }
