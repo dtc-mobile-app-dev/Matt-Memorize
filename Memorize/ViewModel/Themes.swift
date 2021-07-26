@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Themes {
     
-    let themes: [Int : Theme<String>] =
+    static let themes: [Int : Theme<String>] =
         [
             0: Theme.init(content: ["✈️", "🚀", "🚂", "🏎", "🛺", "🚜", "🛵", "🚟", "🚌", "🚕", "🚲", "🛴"], color: "red", themeName: "Vehicles", numberOfPairsOfCards: 10),
             1: Theme.init(content: ["🍆", "🥦", "🧅", "🥔", "🌽", "🥕", "🫑", "🍅", "🧄", "🍠", "🥬", "🥒"], color: "green", themeName: "veggies", numberOfPairsOfCards: 14),
