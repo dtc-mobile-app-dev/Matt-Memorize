@@ -5,11 +5,11 @@
 //  Created by His Dudeness on 7/21/21.
 //
 
-import Foundation
+import SwiftUI
 
 struct Themes <Element> {
     
-    var theme: Array<Element>
+    var theme: <[String], numberOfPairsOfCards, themeName, color>
     
     ["✈️", "🚀", "🚂", "🏎", "🛺", "🚜", "🛵", "🚟", "🚌", "🚕", "🚲", "🛴"], numberOfPairsOfCards: 10, themeName: "Vehicles", color: "red"
     ["🍆", "🥦", "🧅", "🥔", "🌽", "🥕", "🫑", "🍅", "🧄", "🍠", "🥬", "🥒"], numberOfPairsOfCards: 14, themeName: "Veggies", color: "green"
