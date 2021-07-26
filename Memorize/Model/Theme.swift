@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Theme {
-//    var content: [CardContent]
+struct Theme<CardContent> {
+    var content: [CardContent]
     var color: String
     var name: String
     var id: Int
