@@ -21,9 +21,16 @@ class EmojiMemoryGame: ObservableObject {
     private static func createMemoryGame(theme: Theme<String>) -> MemoryGame<String> {
         let emojis = theme.content.shuffled()
         let numberOfPairsOfCards = min(theme.numberOfPairsOfCards, emojis.count)
-        MemoryGame<String>(numberOfPairsOfCards: theme.numberOfPairsOfCards) { pairIndex in
+        
+        return MemoryGame<String>(numberOfPairsOfCards: numberOfPairsOfCards) { pairIndex in
             emojis[pairIndex]
         }
+    }
+    
+    private(set) var theme: Theme<String>
+    
+    init() {
+        theme = Themes.themes[0]! //this assumes there is at least 1 entry in the Dict
     }
     
     @Published private var model = createMemoryGame()
