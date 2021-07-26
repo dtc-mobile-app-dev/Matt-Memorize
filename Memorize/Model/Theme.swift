@@ -10,7 +10,7 @@ import Foundation
 struct Theme<CardContent> {
     var content: [CardContent]
     var color: String
-    var name: String
-    var id: Int
+    var themeName: String
+    var numberOfPairsOfCards: Int
 }
 
