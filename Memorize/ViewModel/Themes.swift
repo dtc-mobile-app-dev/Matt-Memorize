@@ -8,6 +8,9 @@
 import Foundation
 
 struct Themes <Element> {
+    
+    var theme: Array<Element>
+    
     ["✈️", "🚀", "🚂", "🏎", "🛺", "🚜", "🛵", "🚟", "🚌", "🚕", "🚲", "🛴"], numberOfPairsOfCards: 10, themeName: "Vehicles", color: "red"
     ["🍆", "🥦", "🧅", "🥔", "🌽", "🥕", "🫑", "🍅", "🧄", "🍠", "🥬", "🥒"], numberOfPairsOfCards: 14, themeName: "Veggies", color: "green"
     ["⚽️", "🏈", "🎾", "⚾️", "🏐", "🏓", "🥍", "🥏", "🏀", "🏏", "🏒", "🤺"], numberOfPairsOfCards: 12, themeName: "Sports", color: "blue"
