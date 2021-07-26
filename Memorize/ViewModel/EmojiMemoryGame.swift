@@ -48,8 +48,12 @@ class EmojiMemoryGame: ObservableObject {
         model.shuffle()
     }
     
-    func restart() {
+    func newGame() {
         model = EmojiMemoryGame.createMemoryGame()
     }
     
+    func pickThemeId() -> Int {
+        let numChoices = Themes.themes.count
+        return Int.random(in: 0..<numChoices)
+    }
 }
