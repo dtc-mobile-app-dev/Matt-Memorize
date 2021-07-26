@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Themes {
     
-    
+    let themes: [Theme<String>]
     
     ["✈️", "🚀", "🚂", "🏎", "🛺", "🚜", "🛵", "🚟", "🚌", "🚕", "🚲", "🛴"], numberOfPairsOfCards: 10, themeName: "Vehicles", color: "red"
     ["🍆", "🥦", "🧅", "🥔", "🌽", "🥕", "🫑", "🍅", "🧄", "🍠", "🥬", "🥒"], numberOfPairsOfCards: 14, themeName: "Veggies", color: "green"
