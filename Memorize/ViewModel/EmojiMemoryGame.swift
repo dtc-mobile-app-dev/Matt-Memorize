@@ -31,9 +31,10 @@ class EmojiMemoryGame: ObservableObject {
     
     init() {
         theme = Themes.themes[0]! //this assumes there is at least 1 entry in the Dict
+        model = Self.createMemoryGame(theme: theme)
     }
     
-    @Published private var model = createMemoryGame()
+    @Published private var model: MemoryGame<String>
     
     var cards: Array<Card> {
         return model.cards
