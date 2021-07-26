@@ -20,8 +20,3 @@ struct Themes {
         ]
 }
 
-//    if ContentCount <= numberOfPairsOfCards {
-//        return pairsOfCards == ContentCount
-//    }
-
-
