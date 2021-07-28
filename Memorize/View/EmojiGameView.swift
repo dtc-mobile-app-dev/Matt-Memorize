@@ -18,7 +18,7 @@ struct EmojiGameView: View {
                 title
                 gameBody
                 HStack {
-                    restart
+                    newGame
                     Spacer()
                     shuffle
                 }
@@ -68,7 +68,7 @@ struct EmojiGameView: View {
                     }
             }
         }
-        .foregroundColor(CardConstants.color)
+        .foregroundColor(Themes.themes)
     }
     
     var deckBody: some View {
@@ -99,7 +99,7 @@ struct EmojiGameView: View {
         }
     }
     
-    var restart: some View {
+    var newGame: some View {
         Button("New Game") {
             withAnimation {
                 dealt = []
