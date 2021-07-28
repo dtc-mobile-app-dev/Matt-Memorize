@@ -113,7 +113,7 @@ struct EmojiGameView: View {
     }
     
     private struct CardConstants {
-//        static let color = Color.red
+        static let color = Color.red
         static let aspectRatio: CGFloat = 2/3
         static let dealDuration: Double = 0.5
         static let totalDealDuration: Double = 2
