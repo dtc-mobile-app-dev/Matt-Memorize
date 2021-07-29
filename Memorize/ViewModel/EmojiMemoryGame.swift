@@ -36,6 +36,10 @@ class EmojiMemoryGame: ObservableObject {
     
     @Published private var model: MemoryGame<String>
     
+    var score: Int {
+        model.score
+    }
+    
     var cards: Array<Card> {
         return model.cards
     }

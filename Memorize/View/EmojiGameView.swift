@@ -109,7 +109,7 @@ struct EmojiGameView: View {
     }
     
     var score: some View {
-        Text("")
+        Text("Score: \(game.score)")
     }
     
     private struct CardConstants {
