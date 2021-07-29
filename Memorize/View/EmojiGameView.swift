@@ -15,7 +15,7 @@ struct EmojiGameView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack {
-                title
+                score
                 gameBody
                 HStack {
                     newGame
@@ -108,8 +108,8 @@ struct EmojiGameView: View {
         }
     }
     
-    var title: some View {
-        Text("Memorize")
+    var score: some View {
+        Text("")
     }
     
     private struct CardConstants {

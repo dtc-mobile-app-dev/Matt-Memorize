@@ -11,20 +11,30 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
     
     private(set) var cards: Array<Card>
     
+    private var score: Int
+    
     private var indexOfTheOneAndOnlyFaceUpCard: Int? {
         get {cards.indices.filter{index in cards[index].isFaceUp}.oneAndOnly}
         set {cards.indices.forEach{index in cards[index].isFaceUp = (index == newValue) } }
     }
     
     mutating func choose(_ card: Card) {
+        
         if let chosenIndex = cards.firstIndex(where: {$0.id == card.id}),
            !cards[chosenIndex].isFaceUp,
            !cards[chosenIndex].isMatched
         {
+//            potentialMatchIndex is the potential for a card to match with another card, based on if it is the one and only face up card
             if let potentialMatchIndex = indexOfTheOneAndOnlyFaceUpCard {
+//                if the content of cards of chosenIndex is the same as potentialMatchIndex
                 if cards[chosenIndex].content == cards[potentialMatchIndex].content {
                     cards[chosenIndex].isMatched = true
                     cards[potentialMatchIndex].isMatched = true
+                    score += 2
+                    
+//                    if cards[chosenIndex].beenSeen {
+//                        cards[chosenIndex].beenSeen
+//                    }
                 }
                 cards[chosenIndex].isFaceUp = true
             } else {
@@ -63,6 +73,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         var isMatched = false
         let content: CardContent
         let id: Int
+        var beenSeen = false
         
         // MARK: - Bonus Time
         
