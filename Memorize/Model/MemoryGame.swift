@@ -34,11 +34,12 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
                     
 //                    if bonusTimeRemaing <= 6, return Card.beenSeen = true
 //                    if Card.beenSeen isMatched!, return score -= 1
-                    if cards[chosenIndex].beenSeen {
-                        
-                    }
+
+                } else if cards[chosenIndex].beenSeen {
+                    score -= 1
                 }
                 cards[chosenIndex].isFaceUp = true
+                cards[chosenIndex].beenSeen = true
             } else {
                 indexOfTheOneAndOnlyFaceUpCard = chosenIndex
             }
