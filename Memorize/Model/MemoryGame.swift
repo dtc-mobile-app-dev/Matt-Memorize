@@ -31,6 +31,9 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
                     cards[chosenIndex].isMatched = true
                     cards[potentialMatchIndex].isMatched = true
                     score += 2
+                    if cards[potentialMatchIndex].hasEarnedBonus {
+                        score += 1
+                    }
                     
 //                    if bonusTimeRemaing <= 6, return Card.beenSeen = true
 //                    if Card.beenSeen isMatched!, return score -= 1
