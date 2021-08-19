@@ -5,7 +5,7 @@
 //  Created by His Dudeness on 8/19/21.
 //
 
-import Foundation
+import SwiftUI
 
 class ThemeChooser: ObservableObject {
     
