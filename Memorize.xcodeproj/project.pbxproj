@@ -17,6 +17,7 @@
 		EF9C4849268B84CB00CF9C28 /* EmojiGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9C4848268B84CB00CF9C28 /* EmojiGameView.swift */; };
 		EF9C484B268B84CC00CF9C28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9C484A268B84CC00CF9C28 /* Assets.xcassets */; };
 		EF9C484E268B84CC00CF9C28 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9C484D268B84CC00CF9C28 /* Preview Assets.xcassets */; };
+		EFB65CDD26CEAD850021B0B4 /* ThemeChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB65CDC26CEAD850021B0B4 /* ThemeChooser.swift */; };
 		EFB7C3CA268CE14E004E192D /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB7C3C9268CE14E004E192D /* MemoryGame.swift */; };
 		EFB7C3CC268CE49A004E192D /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB7C3CB268CE49A004E192D /* EmojiMemoryGame.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		EF9C484A268B84CC00CF9C28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF9C484D268B84CC00CF9C28 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EF9C484F268B84CC00CF9C28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFB65CDC26CEAD850021B0B4 /* ThemeChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChooser.swift; sourceTree = "<group>"; };
 		EFB7C3C9268CE14E004E192D /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		EFB7C3CB268CE49A004E192D /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +111,7 @@
 			children = (
 				EFB7C3CB268CE49A004E192D /* EmojiMemoryGame.swift */,
 				EF6C11B526A88CE900C9F17F /* Themes.swift */,
+				EFB65CDC26CEAD850021B0B4 /* ThemeChooser.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF5F10D526974E850064FD45 /* Pie.swift in Sources */,
+				EFB65CDD26CEAD850021B0B4 /* ThemeChooser.swift in Sources */,
 				EF6C11B326A87AC500C9F17F /* Theme.swift in Sources */,
 				EF5F10D7269758760064FD45 /* Cardify.swift in Sources */,
 				EFB7C3CA268CE14E004E192D /* MemoryGame.swift in Sources */,
