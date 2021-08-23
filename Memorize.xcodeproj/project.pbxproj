@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF144DC226B1BB8B00B58D32 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF144DC126B1BB8B00B58D32 /* Extensions.swift */; };
 		EF5F10D526974E850064FD45 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F10D426974E850064FD45 /* Pie.swift */; };
 		EF5F10D7269758760064FD45 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F10D6269758760064FD45 /* Cardify.swift */; };
 		EF6C11B326A87AC500C9F17F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C11B226A87AC500C9F17F /* Theme.swift */; };
@@ -26,7 +25,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EF144DC126B1BB8B00B58D32 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EF5F10D426974E850064FD45 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 		EF5F10D6269758760064FD45 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 		EF6C11B226A87AC500C9F17F /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -60,7 +58,6 @@
 		EF144DC026B1BB7A00B58D32 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				EF144DC126B1BB8B00B58D32 /* Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -222,7 +219,6 @@
 				EFB7C3CA268CE14E004E192D /* MemoryGame.swift in Sources */,
 				EF6C11B626A88CE900C9F17F /* Themes.swift in Sources */,
 				EF9E116526D3FF9600CAFE57 /* UtilityViews.swift in Sources */,
-				EF144DC226B1BB8B00B58D32 /* Extensions.swift in Sources */,
 				EF9C4849268B84CB00CF9C28 /* EmojiGameView.swift in Sources */,
 				EF9C4847268B84CB00CF9C28 /* MemorizeApp.swift in Sources */,
 				EF9E116026D3F86100CAFE57 /* RGBAColor.swift in Sources */,
