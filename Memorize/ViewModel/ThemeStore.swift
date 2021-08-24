@@ -52,11 +52,11 @@ class ThemeStore<CardContent: Codable> : ObservableObject {
         return index % themes.count
     }
     
-    func insertTheme(named name: String, emojis: String? = nil, at index: Int = 0) {
+    func insertTheme(named name: String, color: String, emojis: [CardContent], numberOfPairsOfCards: Int, at index: Int = 0) {
         let unique = (themes.max(by: { $0.id < $1.id })?.id ?? 0) + 1
-        let themes = Theme<CardContent>
+        let theme = Theme<CardContent>(content: emojis, color: color, themeName: name, numberOfPairsOfCards: numberOfPairsOfCards, id: unique)
         let safeIndex = min(max(index, 0), themes.count)
-        themes.insert(themes, at: safeIndex)
+        themes.insert(theme, at: safeIndex)
     }
 
 }
