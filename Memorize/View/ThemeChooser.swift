@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct ThemeChooser: View {
-    @EnvironmentObject var StoreFront {
-        
-    }
+    @EnvironmentObject var storeFront: ThemeStore<String>
     
     
     var body: some View {
