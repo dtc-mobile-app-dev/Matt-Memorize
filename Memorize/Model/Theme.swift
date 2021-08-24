@@ -7,10 +7,20 @@
 
 import Foundation
 
-struct Theme<CardContent> {
+struct Theme<CardContent: Codable> : Identifiable, Codable, Hashable {
+    
+    static func == (lhs: Theme<CardContent>, rhs: Theme<CardContent>) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
     var content: [CardContent]
     var color: String
     var themeName: String
     var numberOfPairsOfCards: Int
+    var id: Int
 }
 
