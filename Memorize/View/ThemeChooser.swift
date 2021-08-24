@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ThemeChooser: View {
+    @EnvironmentObject var StoreFront {
+        
+    }
+    
+    
     var body: some View {
         List {
             Text("Here's the theme chooser")
