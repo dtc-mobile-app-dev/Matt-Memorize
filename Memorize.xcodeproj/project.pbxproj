@@ -85,6 +85,7 @@
 		EF9C4845268B84CB00CF9C28 /* Memorize */ = {
 			isa = PBXGroup;
 			children = (
+				EF9C4846268B84CB00CF9C28 /* MemorizeApp.swift */,
 				EF9E116126D3FF4300CAFE57 /* Extensions */,
 				EF144DC026B1BB7A00B58D32 /* Utilities */,
 				EFE062B426A743CF001CD544 /* View */,
@@ -137,7 +138,6 @@
 		EFE062B426A743CF001CD544 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EF9C4846268B84CB00CF9C28 /* MemorizeApp.swift */,
 				EF5F10D6269758760064FD45 /* Cardify.swift */,
 				EF9C4848268B84CB00CF9C28 /* EmojiGameView.swift */,
 				EF5F10D426974E850064FD45 /* Pie.swift */,
