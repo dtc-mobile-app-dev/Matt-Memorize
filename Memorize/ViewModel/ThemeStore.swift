@@ -36,7 +36,7 @@ class ThemeStore: ObservableObject {
         self.name = name
         restoreFromUserDefaults()
         if theme.isEmpty {
-            insertTheme(named: <#T##String#>)
+            
         }
     }
     func theme(at index: Int) -> Theme {
