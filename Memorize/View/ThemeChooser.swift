@@ -13,7 +13,9 @@ struct ThemeChooser: View {
     
     var body: some View {
         List {
-            Text("Here's the theme chooser")
+            ForEach(storeFront.themes) { theme in
+                Text("Theme is: \(theme.themeName)")
+            }
         }
     }
 }
