@@ -10,7 +10,7 @@ import SwiftUI
 struct ThemeChooser: View {
     var body: some View {
         List {
-            
+            Text("Here's the theme chooser")
         }
     }
 }
