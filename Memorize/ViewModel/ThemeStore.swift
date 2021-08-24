@@ -10,7 +10,7 @@ import SwiftUI
 class ThemeStore: ObservableObject {
         let name: String
         
-    @Published var theme = [Theme]() {
+    @Published var theme = [Theme<Any>]() {
             didSet {
                 storeInUserDefaults()
             }
@@ -39,7 +39,7 @@ class ThemeStore: ObservableObject {
             
         }
     }
-    func theme(at index: Int) -> Theme {
+    func theme(at index: Int) -> Theme<Any> {
         let safeIndex = min(max(index, 0), theme.count - 1)
         return theme[safeIndex]
     }
