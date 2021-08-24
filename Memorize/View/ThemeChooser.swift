@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ThemeChooser: View {
     var body: some View {
-        List()
+        List {
+            
+        }
     }
 }
 
