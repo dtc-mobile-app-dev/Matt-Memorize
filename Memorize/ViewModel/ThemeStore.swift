@@ -23,7 +23,7 @@ struct Themed: Identifiable, Codable, Hashable {
 class ThemeStore: ObservableObject {
         let name: String
         
-    @Published var themes = [Themed] {
+    @Published var themed = [Themed]() {
             didSet {
                 storeInUserDefaults()
             }
@@ -34,21 +34,21 @@ class ThemeStore: ObservableObject {
         }
         
         private func storeInUserDefaults() {
-            UserDefaults.standard.set(try? JSONEncoder().encode(themes), forKey: userDefaultsKey)
+            UserDefaults.standard.set(try? JSONEncoder().encode(themed), forKey: userDefaultsKey)
     //        UserDefaults.standard.set(palettes.map { [$0.name,$0.emojis,String($0.id)] }, forKey: userDefaultsKey )
         }
         
         private func restoreFromUserDefaults() {
             if let jsonData = UserDefaults.standard.data(forKey: userDefaultsKey),
-               let decodedThemes = try? JSONDecoder().decode(Array<Theme>.self, from: jsonData) {
-                themes = decodedThemes
+               let decodedThemes = try? JSONDecoder().decode(Array<Themed>.self, from: jsonData) {
+                themed = decodedThemes
             }
     }
     
     init(named name: String) {
         self.name = name
         restoreFromUserDefaults()
-        if themes.isEmpty {
+        if themed.isEmpty {
             
         }
     }
