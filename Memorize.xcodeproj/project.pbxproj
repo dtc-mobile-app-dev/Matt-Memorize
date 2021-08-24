@@ -125,7 +125,6 @@
 			children = (
 				EFB7C3CB268CE49A004E192D /* EmojiMemoryGame.swift */,
 				EF6C11B526A88CE900C9F17F /* Themes.swift */,
-				EFB65CDC26CEAD850021B0B4 /* ThemeChooser.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -138,6 +137,7 @@
 				EF9C4848268B84CB00CF9C28 /* EmojiGameView.swift */,
 				EF5F10D426974E850064FD45 /* Pie.swift */,
 				EF82B4332696140500C7A7F1 /* AspectVGrid.swift */,
+				EFB65CDC26CEAD850021B0B4 /* ThemeChooser.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
