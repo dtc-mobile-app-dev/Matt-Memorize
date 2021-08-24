@@ -7,19 +7,6 @@
 
 import SwiftUI
 
-struct Themed: Identifiable, Codable, Hashable {
-    var name: String
-    var emojis: String
-    var id: Int
-    
-    fileprivate init(name: String, emojis: String, id: Int) {
-        self.name = name
-        self.emojis = emojis
-        self.id = id
-    }
-
-}
-
 class ThemeStore: ObservableObject {
         let name: String
         
@@ -49,7 +36,7 @@ class ThemeStore: ObservableObject {
         self.name = name
         restoreFromUserDefaults()
         if themed.isEmpty {
-            
+            insertThemed(named: <#T##String#>)
         }
     }
     func themed(at index: Int) -> Themed {
