@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EF4A4FBC26D54752003DA12A /* ThemeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4A4FBB26D54752003DA12A /* ThemeStore.swift */; };
 		EF4A4FBE26D56871003DA12A /* ThemeChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4A4FBD26D56871003DA12A /* ThemeChooser.swift */; };
+		EF4A4FC026D5716A003DA12A /* ThemeEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4A4FBF26D5716A003DA12A /* ThemeEditor.swift */; };
 		EF5F10D526974E850064FD45 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F10D426974E850064FD45 /* Pie.swift */; };
 		EF5F10D7269758760064FD45 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F10D6269758760064FD45 /* Cardify.swift */; };
 		EF6C11B326A87AC500C9F17F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C11B226A87AC500C9F17F /* Theme.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		EF4A4FBB26D54752003DA12A /* ThemeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeStore.swift; sourceTree = "<group>"; };
 		EF4A4FBD26D56871003DA12A /* ThemeChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChooser.swift; sourceTree = "<group>"; };
+		EF4A4FBF26D5716A003DA12A /* ThemeEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEditor.swift; sourceTree = "<group>"; };
 		EF5F10D426974E850064FD45 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 		EF5F10D6269758760064FD45 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 		EF6C11B226A87AC500C9F17F /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				EF5F10D426974E850064FD45 /* Pie.swift */,
 				EF82B4332696140500C7A7F1 /* AspectVGrid.swift */,
 				EF4A4FBD26D56871003DA12A /* ThemeChooser.swift */,
+				EF4A4FBF26D5716A003DA12A /* ThemeEditor.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF5F10D526974E850064FD45 /* Pie.swift in Sources */,
+				EF4A4FC026D5716A003DA12A /* ThemeEditor.swift in Sources */,
 				EF9E116326D3FF7800CAFE57 /* UtilityExtensions.swift in Sources */,
 				EF6C11B326A87AC500C9F17F /* Theme.swift in Sources */,
 				EF5F10D7269758760064FD45 /* Cardify.swift in Sources */,
