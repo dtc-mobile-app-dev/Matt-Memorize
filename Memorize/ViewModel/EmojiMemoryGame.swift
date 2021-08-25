@@ -22,8 +22,9 @@ class EmojiMemoryGame: ObservableObject {
     
     private(set) var theme: Theme<String>
     
-    init() {
-        theme = Themes.themes[EmojiMemoryGame.pickThemeId()]! //this assumes there is at least 1 entry in the Dict
+    init(_ theme: Theme<String>) {
+//        theme = Themes.themes[EmojiMemoryGame.pickThemeId()]! //this assumes there is at least 1 entry in the Dict
+        self.theme = theme
         model = Self.createMemoryGame(theme: theme)
     }
     
