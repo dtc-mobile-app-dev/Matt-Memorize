@@ -26,7 +26,13 @@ struct ThemeListItem: View {
     @Binding var theme: Theme<Int>
     
     var body: some View {
-        
+        VStack {
+            themeName
+        }
+    }
+    
+    var themeName: some View {
+        TextField("Name", text: $theme.themeName)
     }
 }
 
