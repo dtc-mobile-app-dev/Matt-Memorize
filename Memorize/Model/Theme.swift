@@ -20,7 +20,7 @@ struct Theme<CardContent: Codable> : Identifiable, Codable, Hashable {
     var content: [CardContent]
     var color: String
     var themeName: String
-    var numberOfPairsOfCards: Int
+    var pairsOfCards: Int
     var id: Int
 }
 
