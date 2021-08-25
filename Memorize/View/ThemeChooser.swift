@@ -28,11 +28,16 @@ struct ThemeListItem: View {
     var body: some View {
         VStack {
             themeName
+            pairsOfCards
         }
     }
     
     var themeName: some View {
-        TextField("Name", text: $theme.themeName)
+        Text("\(theme.themeName)")
+    }
+    
+    var pairsOfCards: some View {
+        Text("\(theme.pairsOfCards)")
     }
 }
 
