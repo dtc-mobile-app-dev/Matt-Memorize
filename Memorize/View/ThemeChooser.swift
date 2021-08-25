@@ -25,3 +25,7 @@ struct ThemeChooser_Previews: PreviewProvider {
         ThemeChooser()
     }
 }
+
+struct ThemeListItem: Hashable, Codable {
+    
+}
