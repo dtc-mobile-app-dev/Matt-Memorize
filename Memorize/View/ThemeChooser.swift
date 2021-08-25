@@ -10,22 +10,28 @@ import SwiftUI
 struct ThemeChooser: View {
     @EnvironmentObject var storeFront: ThemeStore<String>
     
+    @State var theme: Theme<Int>
+    
     
     var body: some View {
         List {
             ForEach(storeFront.themes) { theme in
-                Text("Theme is: \(theme.themeName)")
+                ThemeListItem(theme: $theme)
             }
         }
     }
 }
 
-struct ThemeChooser_Previews: PreviewProvider {
-    static var previews: some View {
-        ThemeChooser()
+struct ThemeListItem: View {
+    @Binding var theme: Theme<Int>
+    
+    var body: some View {
+        
     }
 }
 
-struct ThemeListItem: Hashable, Codable {
-    
-}
+//struct ThemeChooser_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ThemeChooser(theme: Themes.themes [4])
+//    }
+//}
