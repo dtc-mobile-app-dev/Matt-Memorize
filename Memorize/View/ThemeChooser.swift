@@ -10,20 +10,20 @@ import SwiftUI
 struct ThemeChooser: View {
     @EnvironmentObject var storeFront: ThemeStore<String>
     
-    @State var theme: Theme<Int>
+//    @State var theme: Theme<Int>
     
     
     var body: some View {
         List {
             ForEach(storeFront.themes) { theme in
-                ThemeListItem(theme: $theme)
+                ThemeListItem(theme: theme)
             }
         }
     }
 }
 
 struct ThemeListItem: View {
-    @Binding var theme: Theme<Int>
+    var theme: Theme<String>
     
     var body: some View {
         VStack {
