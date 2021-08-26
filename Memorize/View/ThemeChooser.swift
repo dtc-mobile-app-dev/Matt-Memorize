@@ -31,6 +31,7 @@ struct ThemeListItem: View {
             pairsOfCards
             emojis
         }
+        .background(Color(rgbaColor: theme.color))
     }
     
     var themeName: some View {
