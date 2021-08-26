@@ -172,7 +172,7 @@ struct CardView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let game = EmojiMemoryGame(Themes.themes[0]!)
+        let game = EmojiMemoryGame(Themes.themes[0])
         game.choose(game.cards.first!)
         return EmojiGameView(game: game)
     }

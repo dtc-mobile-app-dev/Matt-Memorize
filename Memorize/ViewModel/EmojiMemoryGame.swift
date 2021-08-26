@@ -47,7 +47,7 @@ class EmojiMemoryGame: ObservableObject {
     }
     
     func newGame() {
-        let theme = Themes.themes[EmojiMemoryGame.pickThemeId()]! //this also assumes that there is 1 entry in the Dict
+        let theme = Themes.themes[EmojiMemoryGame.pickThemeId()] //this also assumes that there is 1 entry in the Dict
         model = Self.createMemoryGame(theme: theme)
     }
     
