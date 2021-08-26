@@ -46,7 +46,6 @@ struct ThemeListItem: View {
         Text(theme.content.joined())
     }
     
-    
 }
 
 //struct ThemeChooser_Previews: PreviewProvider {
