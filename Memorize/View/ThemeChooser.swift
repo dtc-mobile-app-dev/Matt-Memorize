@@ -29,6 +29,7 @@ struct ThemeListItem: View {
         VStack {
             themeName
             pairsOfCards
+            emojis
         }
     }
     
@@ -39,6 +40,12 @@ struct ThemeListItem: View {
     var pairsOfCards: some View {
         Text("\(theme.pairsOfCards)")
     }
+    
+    var emojis: some View {
+        Text(theme.content.joined())
+    }
+    
+    
 }
 
 //struct ThemeChooser_Previews: PreviewProvider {
