@@ -18,8 +18,8 @@ struct ThemeEditor: View {
     }
 }
 
-struct ThemeEditor_Previews: PreviewProvider {
-    static var previews: some View {
-        ThemeEditor()
-    }
-}
+//struct ThemeEditor_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ThemeEditor(theme: <#T##Binding<Theme<String>>#>)
+//    }
+//}
