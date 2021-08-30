@@ -112,6 +112,10 @@ struct EmojiGameView: View {
         Text("Score: \(game.score)")
     }
     
+    var themeNameDisplay: some View {
+        Text("\()")
+    }
+    
     private struct CardConstants {
         static let color = Color.red
         static let aspectRatio: CGFloat = 2/3
