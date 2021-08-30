@@ -16,6 +16,7 @@ struct EmojiGameView: View {
         ZStack(alignment: .bottom) {
             VStack {
                 themeNameDisplay
+                Spacer()
                 score
                 gameBody
                 HStack {
