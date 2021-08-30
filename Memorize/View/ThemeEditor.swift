@@ -12,7 +12,7 @@ struct ThemeEditor: View {
     
     var body: some View {
         Form {
-            
+            nameSection
         }
         .navigationTitle("Edit \(theme.themeName)")
         .frame(minWidth: 300, minHeight: 350)
