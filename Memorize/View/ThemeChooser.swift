@@ -14,9 +14,11 @@ struct ThemeChooser: View {
     
     
     var body: some View {
-        List {
-            ForEach(storeFront.themes) { theme in
-                ThemeListItem(theme: theme)
+        NavigationView {
+            List {
+                ForEach(storeFront.themes) { theme in
+                    ThemeListItem(theme: theme)
+                }
             }
         }
     }
