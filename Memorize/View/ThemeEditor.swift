@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ThemeEditor: View {
+    @Binding var theme: Theme<String>
+    
+    
     var body: some View {
         Form {
             
