@@ -17,6 +17,7 @@ struct ThemeChooser: View {
         NavigationView {
             List {
                 ForEach(storeFront.themes) { theme in
+                    NavigationLink(destination: EmojiGameView)
                     ThemeListItem(theme: theme)
                 }
             }
