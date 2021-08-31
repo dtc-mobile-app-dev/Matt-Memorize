@@ -40,18 +40,18 @@ struct ThemeEditor: View {
                 theme.content.append(String(item))
             }
             theme.content
-                .removingDuplicateCharacters
+                .removeDuplicates()
         }
     }
     var removeItemSection: some View {
         Section(header: Text("Remove Emoji")) {
-            let emojis = theme.content.removingDuplicateCharacters.map { String($0) }
+            let content = theme.content.removeDuplicate.map { String($0) }
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 40))]) {
                 ForEach(theme.content, id: \.self) { content in
-                    Text(content)
+                    Text(verbatim: content)
                         .onTapGesture {
                             withAnimation {
-                                theme.emojis.removeAll(where: { String($0) == content })
+                                $theme.content.removeAll(where: { String($0) == content })
                             }
                         }
                 }
