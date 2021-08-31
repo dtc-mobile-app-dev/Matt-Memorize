@@ -23,32 +23,32 @@ struct ThemeEditor: View {
         }
     }
     
-    @State private var emojisToAdd = ""
+    @State private var itemToAdd = ""
     
-    var addEmojiSection: some View {
+    var addItemSection: some View {
         Section(header: Text("Add Emojis")) {
-            TextField("", text: $emojisToAdd)
-                .onChange(of: emojisToAdd) { emojis in
-                    addEmojis(emojis)
+            TextField("", text: $itemToAdd)
+                .onChange(of: itemToAdd) { content in
+                    addItems(content)
                 }
         }
     }
-    func addEmojis(_ emojis: String) {
+    func addItems(_ content: String) {
         withAnimation {
-            theme.emojis = (emojis + theme.emojis)
+            theme.content = (emojis + theme.content)
                 .filter { $0.isEmoji}
                 .removingDuplicateCharacters
         }
     }
     var removeEmojiSection: some View {
         Section(header: Text("Remove Emoji")) {
-            let emojis = theme.emojis.removingDuplicateCharacters.map { String($0) }
+            let emojis = theme.content.removingDuplicateCharacters.map { String($0) }
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 40))]) {
-                ForEach(emojis, id: \.self) { emoji in
-                    Text(emoji)
+                ForEach(theme.content, id: \.self) { content in
+                    Text(content)
                         .onTapGesture {
                             withAnimation {
-                                theme.emojis.removeAll(where: { String($0) == emoji })
+                                theme.emojis.removeAll(where: { String($0) == content })
                             }
                         }
                 }
