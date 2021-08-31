@@ -11,6 +11,8 @@ struct ThemeEditor: View {
     @Binding var theme: Theme<String>
     
     @State private var editMode: EditMode = .inactive
+    
+    @Environment(\.presentationMode) var presentationMode
 
     
     var body: some View {
@@ -19,6 +21,18 @@ struct ThemeEditor: View {
         }
         .navigationTitle("Edit \(theme.themeName)")
         .frame(minWidth: 300, minHeight: 350)
+        .toolbar {
+            ToolbarItem { EditButton() }
+            ToolbarItem(placement: .navigationBarLeading) {
+                if presentationMode.wrappedValue.isPresented,
+                   UIDevice.current.userInterfaceIdiom != .pad {
+                    Button("Close") {
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                }
+            }
+        }
+
     }
     var nameSection: some View {
         Section(header: Text("Name")) {
