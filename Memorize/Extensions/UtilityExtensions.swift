@@ -87,6 +87,22 @@ extension String {
     }
 }
 
+extension Array where Element : Equatable {
+    mutating func removeDuplicates() {
+        var newArray = Array<Element>()
+        
+
+        self.forEach { item in
+            if !newArray.contains(item) {
+                newArray.append(item)
+            }
+        }
+        
+
+        self = newArray
+    }
+}
+
 extension Character {
     var isEmoji: Bool {
         // Swift does not have a way to ask if a Character isEmoji
