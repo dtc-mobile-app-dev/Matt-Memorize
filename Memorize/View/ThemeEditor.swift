@@ -35,8 +35,9 @@ struct ThemeEditor: View {
     }
     func addItems(_ content: String) {
         withAnimation { // turn content String into [String], iterate over array and add each item to theme.content
-            for content in theme.content {
-                
+            let tempArray = Array(content)
+            for item in tempArray {
+                theme.content.append(String(item))
             }
             theme.content = (content + theme.content)
                 .filter { $0.isEmoji}
