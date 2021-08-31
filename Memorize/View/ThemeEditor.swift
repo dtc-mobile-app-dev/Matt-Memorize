@@ -31,7 +31,6 @@ struct ThemeEditor: View {
                 }
             }
         }
-
     }
     var nameSection: some View {
         Section(header: Text("Name")) {
