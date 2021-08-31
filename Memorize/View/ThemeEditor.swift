@@ -32,6 +32,7 @@ struct ThemeEditor: View {
                 }
             }
         }
+        .environment(\.editMode, $editMode)
     }
     var nameSection: some View {
         Section(header: Text("Name")) {
