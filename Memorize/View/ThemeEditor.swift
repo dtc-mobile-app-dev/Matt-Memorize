@@ -20,6 +20,7 @@ struct ThemeEditor: View {
         }
         .navigationTitle("Edit \(theme.themeName)")
         .frame(minWidth: 300, minHeight: 350)
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem { EditButton() }
             ToolbarItem(placement: .navigationBarLeading) {
