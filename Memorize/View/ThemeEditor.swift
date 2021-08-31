@@ -34,8 +34,11 @@ struct ThemeEditor: View {
         }
     }
     func addItems(_ content: String) {
-        withAnimation {
-            theme.content = (emojis + theme.content)
+        withAnimation { // turn content String into [String], iterate over array and add each item to theme.content
+            for content in theme.content {
+                
+            }
+            theme.content = (content + theme.content)
                 .filter { $0.isEmoji}
                 .removingDuplicateCharacters
         }
