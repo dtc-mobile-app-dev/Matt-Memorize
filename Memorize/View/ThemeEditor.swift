@@ -39,12 +39,11 @@ struct ThemeEditor: View {
             for item in tempArray {
                 theme.content.append(String(item))
             }
-            theme.content = (content + theme.content)
-                .filter { $0.isEmoji}
+            theme.content
                 .removingDuplicateCharacters
         }
     }
-    var removeEmojiSection: some View {
+    var removeItemSection: some View {
         Section(header: Text("Remove Emoji")) {
             let emojis = theme.content.removingDuplicateCharacters.map { String($0) }
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 40))]) {
