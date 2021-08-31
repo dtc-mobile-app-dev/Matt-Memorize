@@ -20,6 +20,8 @@ struct ThemeEditor: View {
     var nameSection: some View {
         Section(header: Text("Name")) {
             TextField("Name", text: $theme.themeName)
+        }
+    }
 }
 
 //struct ThemeEditor_Previews: PreviewProvider {
