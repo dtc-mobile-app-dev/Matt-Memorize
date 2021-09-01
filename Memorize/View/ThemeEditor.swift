@@ -75,7 +75,7 @@ struct ThemeEditor: View {
             .font(.system(size: 40))
         }
     }
-}
+}   
 
 //struct ThemeEditor_Previews: PreviewProvider {
 //    static var previews: some View {
