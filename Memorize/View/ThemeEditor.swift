@@ -17,6 +17,8 @@ struct ThemeEditor: View {
     var body: some View {
         Form {
             nameSection
+            addItemSection
+            removeItemSection
         }
         .navigationTitle("Edit \(theme.themeName)")
         .frame(minWidth: 300, minHeight: 350)
@@ -75,7 +77,7 @@ struct ThemeEditor: View {
             .font(.system(size: 40))
         }
     }
-}   
+}
 
 //struct ThemeEditor_Previews: PreviewProvider {
 //    static var previews: some View {
