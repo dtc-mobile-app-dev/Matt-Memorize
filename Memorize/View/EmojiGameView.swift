@@ -70,7 +70,7 @@ struct EmojiGameView: View {
                     }
             }
         }
-        .foregroundColor(CardConstants.color)
+        .foregroundColor(Color(rgbaColor: game.theme.color))
     }
     
     var deckBody: some View {
@@ -83,7 +83,7 @@ struct EmojiGameView: View {
             }
         }
         .frame(width: CardConstants.undealtWidth, height: CardConstants.undealtHeight)
-        .foregroundColor(CardConstants.color)
+        .foregroundColor(Color(rgbaColor: game.theme.color))
         .onTapGesture {
             for card in game.cards {
                 withAnimation(dealAnimation(for: card)) {
