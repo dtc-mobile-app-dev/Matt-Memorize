@@ -24,6 +24,7 @@
 		EF9E116526D3FF9600CAFE57 /* UtilityViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E116426D3FF9600CAFE57 /* UtilityViews.swift */; };
 		EFB7C3CA268CE14E004E192D /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB7C3C9268CE14E004E192D /* MemoryGame.swift */; };
 		EFB7C3CC268CE49A004E192D /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB7C3CB268CE49A004E192D /* EmojiMemoryGame.swift */; };
+		EFC8D8AA26DFFF94005FB11D /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8D8A926DFFF94005FB11D /* Stepper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		EF9E116426D3FF9600CAFE57 /* UtilityViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityViews.swift; sourceTree = "<group>"; };
 		EFB7C3C9268CE14E004E192D /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		EFB7C3CB268CE49A004E192D /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
+		EFC8D8A926DFFF94005FB11D /* Stepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				EF9C484A268B84CC00CF9C28 /* Assets.xcassets */,
 				EF9C484F268B84CC00CF9C28 /* Info.plist */,
 				EF9C484C268B84CC00CF9C28 /* Preview Content */,
+				EFC8D8A926DFFF94005FB11D /* Stepper.swift */,
 			);
 			path = Memorize;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				EF9C4849268B84CB00CF9C28 /* EmojiGameView.swift in Sources */,
 				EF9C4847268B84CB00CF9C28 /* MemorizeApp.swift in Sources */,
 				EF4A4FBE26D56871003DA12A /* ThemeChooser.swift in Sources */,
+				EFC8D8AA26DFFF94005FB11D /* Stepper.swift in Sources */,
 				EF9E116026D3F86100CAFE57 /* RGBAColor.swift in Sources */,
 				EF82B4342696140500C7A7F1 /* AspectVGrid.swift in Sources */,
 				EFB7C3CC268CE49A004E192D /* EmojiMemoryGame.swift in Sources */,
