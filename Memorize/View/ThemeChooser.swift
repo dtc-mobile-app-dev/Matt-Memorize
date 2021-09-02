@@ -12,6 +12,8 @@ struct ThemeChooser: View {
     
     @Environment(\.presentationMode) var presentationMode
     
+    @State private var editMode: EditMode = .inactive
+    
 //    @State var theme: Theme<Int>
     
     
@@ -22,6 +24,7 @@ struct ThemeChooser: View {
                     NavigationLink(destination: EmojiGameView(game: EmojiMemoryGame(theme))) {
                         ThemeListItem(theme: theme)
                     }
+                    .gesture(editMode == .active ? tap : nil)
                 }
             }
             .navigationTitle("Memorize")
@@ -29,19 +32,22 @@ struct ThemeChooser: View {
             .toolbar {
                 ToolbarItem { EditButton() }
                 ToolbarItem(placement: .navigationBarLeading) {
-//                    if presentationMode.wrappedValue.isPresented,
-//                       UIDevice.current.userInterfaceIdiom != .pad {
-//                        Button("Close") {
-//                            presentationMode.wrappedValue.dismiss()
-//                        }
-//                    }
+                    if presentationMode.wrappedValue.isPresented,
+                       UIDevice.current.userInterfaceIdiom != .pad {
+                        Button("Close") {
+                            presentationMode.wrappedValue.dismiss()
+                        }
                 }
             }
-//            .environment(\.editMode, $editMode)
+            .environment(\.editMode, $editMode)
         }
     }
 }
 
+    var tap: some Gesture {
+        TapGesture().onEnded { }
+    }
+    
 struct ThemeListItem: View {
     var theme: Theme<String>
     

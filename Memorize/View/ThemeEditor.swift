@@ -10,9 +10,7 @@ import SwiftUI
 struct ThemeEditor: View {
     @Binding var theme: Theme<String>
     
-    @State private var editMode: EditMode = .inactive
-    
-    
+   
     
     var body: some View {
         Form {
