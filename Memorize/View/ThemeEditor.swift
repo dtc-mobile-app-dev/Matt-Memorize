@@ -20,21 +20,7 @@ struct ThemeEditor: View {
             addItemSection
             removeItemSection
         }
-        .navigationTitle("Edit \(theme.themeName)")
         .frame(minWidth: 300, minHeight: 350)
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem { EditButton() }
-            ToolbarItem(placement: .navigationBarLeading) {
-                if presentationMode.wrappedValue.isPresented,
-                   UIDevice.current.userInterfaceIdiom != .pad {
-                    Button("Close") {
-                        presentationMode.wrappedValue.dismiss()
-                    }
-                }
-            }
-        }
-        .environment(\.editMode, $editMode)
     }
     
     var nameSection: some View {
