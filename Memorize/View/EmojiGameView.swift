@@ -20,6 +20,8 @@ struct EmojiGameView: View {
                 score
                 gameBody
                 HStack {
+//                    newGame
+//                    Spacer()
                     shuffle
                 }
                 .padding(.horizontal)
