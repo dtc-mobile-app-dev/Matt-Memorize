@@ -39,8 +39,8 @@ struct ThemeChooser: View {
                         }
                     }
                 }
-                .environment(\.editMode, $editMode)
             }
+            .environment(\.editMode, $editMode)
         }
     }
 
