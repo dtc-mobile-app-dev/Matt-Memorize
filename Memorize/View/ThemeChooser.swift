@@ -37,12 +37,12 @@ struct ThemeChooser: View {
                         Button("Close") {
                             presentationMode.wrappedValue.dismiss()
                         }
+                    }
                 }
+                .environment(\.editMode, $editMode)
             }
-            .environment(\.editMode, $editMode)
         }
     }
-}
 
     var tap: some Gesture {
         TapGesture().onEnded { }
@@ -79,3 +79,4 @@ struct ThemeListItem: View {
 //        ThemeChooser(theme: Themes.themes [4])
 //    }
 //}
+}
