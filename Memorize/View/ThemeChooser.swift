@@ -10,6 +10,8 @@ import SwiftUI
 struct ThemeChooser: View {
     @EnvironmentObject var storeFront: ThemeStore<String>
     
+    @Environment(\.presentationMode) var presentationMode
+    
 //    @State var theme: Theme<Int>
     
     
@@ -22,20 +24,20 @@ struct ThemeChooser: View {
                     }
                 }
             }
-            .navigationTitle("Edit \(theme.themeName)")
+            .navigationTitle("Memorize")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem { EditButton() }
                 ToolbarItem(placement: .navigationBarLeading) {
-                    if presentationMode.wrappedValue.isPresented,
-                       UIDevice.current.userInterfaceIdiom != .pad {
-                        Button("Close") {
-                            presentationMode.wrappedValue.dismiss()
-                        }
-                    }
+//                    if presentationMode.wrappedValue.isPresented,
+//                       UIDevice.current.userInterfaceIdiom != .pad {
+//                        Button("Close") {
+//                            presentationMode.wrappedValue.dismiss()
+//                        }
+//                    }
                 }
             }
-            .environment(\.editMode, $editMode)
+//            .environment(\.editMode, $editMode)
         }
     }
 }

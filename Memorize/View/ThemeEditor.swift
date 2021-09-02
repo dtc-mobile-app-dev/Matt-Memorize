@@ -12,7 +12,7 @@ struct ThemeEditor: View {
     
     @State private var editMode: EditMode = .inactive
     
-    @Environment(\.presentationMode) var presentationMode
+    
     
     var body: some View {
         Form {
