@@ -24,7 +24,7 @@ struct ThemeChooser: View {
                     NavigationLink(destination: EmojiGameView(game: EmojiMemoryGame(theme))) {
                         ThemeListItem(theme: theme)
                     }
-                    .gesture(editMode == .active ? tap : nil)
+                    .gesture(editMode == .active ? tap(theme) : nil)
                 }
                 .onDelete { indexSet in
                     storeFront.themes.remove(atOffsets: indexSet)
