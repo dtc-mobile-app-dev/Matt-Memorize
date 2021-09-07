@@ -49,6 +49,12 @@ struct ThemeChooser: View {
             .environment(\.editMode, $editMode)
         }
     }
+    
+    func body(for theme: Theme) -> some View {
+        HStack {
+            Text(theme.themeName)
+        }
+    }
 
     var tap: some Gesture {
         TapGesture().onEnded { print("tapped")}
