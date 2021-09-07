@@ -55,8 +55,8 @@ struct ThemeChooser: View {
     
     @State private var themeToEdit: Theme<String>?
 
-    var tap: some Gesture {
-        TapGesture().onEnded { print("tapped")}
+    func tap(_ theme: Theme<String>) -> some Gesture {
+        TapGesture().onEnded { themeToEdit = theme }
     }
     
 struct ThemeListItem: View {
