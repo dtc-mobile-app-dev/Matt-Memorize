@@ -26,6 +26,12 @@ struct ThemeChooser: View {
                     }
                     .gesture(editMode == .active ? tap : nil)
                 }
+                .onDelete { indexSet in
+                    storeFront.themes.remove(atOffsets: indexSet)
+                }
+                .onMove { indexSet, newOffset in
+                    storeFront.themes.move(fromOffsets: indexSet, toOffset: newOffset)
+                }
             }
             .navigationTitle("Memorize")
             .navigationBarTitleDisplayMode(.inline)
@@ -45,7 +51,7 @@ struct ThemeChooser: View {
     }
 
     var tap: some Gesture {
-        TapGesture().onEnded { }
+        TapGesture().onEnded { print("tapped")}
     }
     
 struct ThemeListItem: View {
