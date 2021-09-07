@@ -54,7 +54,13 @@ struct ThemeChooser: View {
         HStack {
             Text(theme.themeName)
         }
+        .id(theme.id)
+        .sheet(isPresented: $themeToEdit) {
+            
+        }
     }
+    
+    @State private var themeToEdit: Theme<String>?
 
     var tap: some Gesture {
         TapGesture().onEnded { print("tapped")}
