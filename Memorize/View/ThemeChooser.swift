@@ -50,7 +50,7 @@ struct ThemeChooser: View {
         }
     }
     
-    func body(for theme: Theme) -> some View {
+    func body(for theme: Theme<String>) -> some View {
         HStack {
             Text(theme.themeName)
         }
