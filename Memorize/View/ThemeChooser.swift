@@ -47,16 +47,9 @@ struct ThemeChooser: View {
 //                }
             }
             .environment(\.editMode, $editMode)
-        }
-    }
-    
-    func body(for theme: Theme<String>) -> some View {
-        HStack {
-            Text(theme.themeName)
-        }
-        .id(theme.id)
-        .sheet(isPresented: $themeToEdit) {
-            
+            .sheet(item: $themeToEdit) { theme in
+                ThemeEditor(theme: $storeFront.themes[theme])
+            }
         }
     }
     
