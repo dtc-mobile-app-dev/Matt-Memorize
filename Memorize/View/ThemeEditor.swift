@@ -15,7 +15,7 @@ struct ThemeEditor: View {
             nameSection
             addItemSection
             removeItemSection
-//            colorSection
+            colorSection
             cardPairs
         }
         .frame(minWidth: 300, minHeight: 350)
@@ -29,14 +29,16 @@ struct ThemeEditor: View {
     
     @State private var itemToAdd = ""
     
-//    var colorSection: some View {
-//        Section(header: Text("Choose Color")) {
-//            ColorPicker(selection: <#T##Binding<Color>#>, label: <#T##() -> _#>)
-//        }
-//    }
+    var colorSection: some View {
+        Section(header: Text("Choose Color")) {
+            ColorPicker(selection: <#T##Binding<Color>#>, label: <#T##() -> _#>)
+        }
+    }
     
     var cardPairs: some View {
-        Stepper("Pairs: \(theme.pairsOfCards)", value: $theme.pairsOfCards)
+        Section(header: Text("Number of Pairs of Cards")) {
+            Stepper("Pairs: \(theme.pairsOfCards)", value: $theme.pairsOfCards)
+        }
     }
     
     var addItemSection: some View {
