@@ -10,9 +10,6 @@ import SwiftUI
 struct ThemeEditor: View {
     @Binding var theme: Theme<String>
     
-    @State var pairsOfCards: Int = 0
-   
-    
     var body: some View {
         Form {
             nameSection
@@ -39,7 +36,7 @@ struct ThemeEditor: View {
 //    }
     
     var cardPairs: some View {
-        Stepper("Pairs: \(pairsOfCards)", value: $pairsOfCards)
+        Stepper("Pairs: \(theme.pairsOfCards)", value: $theme.pairsOfCards)
     }
     
     var addItemSection: some View {
