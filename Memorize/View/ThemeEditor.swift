@@ -30,8 +30,10 @@ struct ThemeEditor: View {
     @State private var itemToAdd = ""
     
     var colorSection: some View {
-        Section(header: Text("Choose Color")) {
-            ColorPicker(selection: <#T##Binding<Color>#>, label: <#T##() -> _#>)
+        let colorBinding = Binding(get: { Color(rgbaColor: theme.color)}, set: { theme.color = RGBAColor(color: $0)})
+        
+        return Section(header: Text("Choose Color")) {
+            ColorPicker("Pick a Color", selection: colorBinding)
         }
     }
     
