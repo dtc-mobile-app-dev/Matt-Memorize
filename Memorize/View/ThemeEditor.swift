@@ -10,6 +10,7 @@ import SwiftUI
 struct ThemeEditor: View {
     @Binding var theme: Theme<String>
     
+    @State var pairsOfCards: Int = 0
    
     
     var body: some View {
@@ -18,6 +19,7 @@ struct ThemeEditor: View {
             addItemSection
             removeItemSection
             colorSection
+            Stepper("Pairs: \(pairsOfCards)", value: $pairsOfCards)
         }
         .frame(minWidth: 300, minHeight: 350)
     }
@@ -32,7 +34,7 @@ struct ThemeEditor: View {
     
     var colorSection: some View {
         Section(header: Text("Choose Color")) {
-            ColorPicker
+            ColorPicker(selection: <#T##Binding<Color>#>, label: <#T##() -> _#>)
         }
     }
     
