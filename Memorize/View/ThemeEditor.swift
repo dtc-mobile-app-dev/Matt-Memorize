@@ -32,7 +32,7 @@ struct ThemeEditor: View {
     
     var colorSection: some View {
         Section(header: Text("Choose Color")) {
-            
+            ColorPicker
         }
     }
     
