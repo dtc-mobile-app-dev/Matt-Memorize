@@ -17,6 +17,7 @@ struct ThemeEditor: View {
             nameSection
             addItemSection
             removeItemSection
+            colorSection
         }
         .frame(minWidth: 300, minHeight: 350)
     }
@@ -28,6 +29,12 @@ struct ThemeEditor: View {
     }
     
     @State private var itemToAdd = ""
+    
+    var colorSection: some View {
+        Section(header: Text("Choose Color")) {
+            
+        }
+    }
     
     var addItemSection: some View {
         Section(header: Text("Add Emojis")) {
