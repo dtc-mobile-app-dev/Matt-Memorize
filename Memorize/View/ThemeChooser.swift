@@ -45,12 +45,14 @@ struct ThemeChooser: View {
         }
         
         func themeListItem(_ theme: Theme<String>) -> some View {
-            VStack {
-                themeName
-                pairsOfCards
-                emojis
+            var body: some View {
+                VStack {
+                    themeName
+                    pairsOfCards
+                    emojis
+                }
+                .background(Color(rgbaColor: storeFront.themes[theme].color))
             }
-            .background(Color(rgbaColor: storeFront.themes[theme].color))
         }
         var themeName: some View {
             Text("\(storeFront.themes[theme].themeName)")
