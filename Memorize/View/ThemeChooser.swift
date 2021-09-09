@@ -35,6 +35,7 @@ struct ThemeChooser: View {
             }
             .navigationTitle("Memorize")
             .navigationBarTitleDisplayMode(.inline)
+//          switch to navigationBarItems(leading:) in order to put in the "add theme" ability
             .toolbar {
                 ToolbarItem { EditButton() }
             }
