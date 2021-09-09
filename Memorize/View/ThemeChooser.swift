@@ -43,26 +43,16 @@ struct ThemeChooser: View {
                 ThemeEditor(theme: $storeFront.themes[theme])
             }
         }
+    }
         
         func themeListItem(_ theme: Theme<String>) -> some View {
                 VStack {
-                    themeName
-                    pairsOfCards
-                    emojis
+                    Text("\(storeFront.themes[theme].themeName)")
+                    Text("\(storeFront.themes[theme].pairsOfCards)")
+                    Text(storeFront.themes[theme].content.joined())
                 }
                 .background(Color(rgbaColor: storeFront.themes[theme].color))
         }
-        var themeName: some View {
-            Text("\(storeFront.themes[theme].themeName)")
-        }
-        var pairsOfCards: some View {
-            Text("\(storeFront.themes[theme].pairsOfCards)")
-        }
-        var emojis: some View {
-            Text(storeFront.themes[theme].content.joined())
-        }
-        
-    }
     
     @State private var themeToEdit: Theme<String>?
 
