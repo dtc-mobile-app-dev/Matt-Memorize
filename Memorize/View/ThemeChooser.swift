@@ -22,7 +22,7 @@ struct ThemeChooser: View {
             List {
                 ForEach(storeFront.themes) { theme in
                     NavigationLink(destination: EmojiGameView(game: EmojiMemoryGame(theme))) {
-                        themeListItem(theme: theme)
+                        themeListItem(theme)
                     }
                     .gesture(editMode == .active ? tap(theme) : nil)
                 }
