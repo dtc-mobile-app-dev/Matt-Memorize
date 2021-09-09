@@ -22,7 +22,7 @@ struct ThemeChooser: View {
             List {
                 ForEach(storeFront.themes) { theme in
                     NavigationLink(destination: EmojiGameView(game: EmojiMemoryGame(theme))) {
-                        ThemeListItem(theme: theme)
+                        themeListItem(theme: theme)
                     }
                     .gesture(editMode == .active ? tap(theme) : nil)
                 }
@@ -43,6 +43,15 @@ struct ThemeChooser: View {
                 ThemeEditor(theme: $storeFront.themes[theme])
             }
         }
+        
+        func themeListItem() {
+            VStack {
+                themeName
+                pairsOfCards
+                emojis
+            }
+        }
+        
     }
     
     @State private var themeToEdit: Theme<String>?
@@ -51,30 +60,30 @@ struct ThemeChooser: View {
         TapGesture().onEnded { themeToEdit = theme }
     }
     
-    struct ThemeListItem: View {
-        var theme: Theme<String>
-        
-        var body: some View {
-            VStack {
-                themeName
-                pairsOfCards
-                emojis
-            }
-            .background(Color(rgbaColor: theme.color))
-        }
-        
-        var themeName: some View {
-            Text("\(theme.themeName)")
-        }
-        
-        var pairsOfCards: some View {
-            Text("\(theme.pairsOfCards)")
-        }
-        
-        var emojis: some View {
-            Text(theme.content.joined())
-        }
-    }
+//    struct ThemeListItem: View {
+//        var theme: Theme<String>
+//
+//        var body: some View {
+//            VStack {
+//                themeName
+//                pairsOfCards
+//                emojis
+//            }
+//            .background(Color(rgbaColor: storeFront.themes[theme].color))
+//        }
+//
+//        var themeName: some View {
+//            Text("\(theme.themeName)")
+//        }
+//
+//        var pairsOfCards: some View {
+//            Text("\(theme.pairsOfCards)")
+//        }
+//
+//        var emojis: some View {
+//            Text(theme.content.joined())
+//        }
+//    }
 
 //struct ThemeChooser_Previews: PreviewProvider {
 //    static var previews: some View {
