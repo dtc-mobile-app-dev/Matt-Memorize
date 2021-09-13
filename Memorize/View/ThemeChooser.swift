@@ -36,7 +36,7 @@ struct ThemeChooser: View {
             .navigationTitle("Memorize")
             .navigationBarItems(leading: Button(action: {
 //                insert new theme here
-                
+                storeFront.insertTheme() 
             } ){Image(systemName: "plus.circle")}, trailing: EditButton())
             .navigationBarTitleDisplayMode(.inline)
 //          switch to navigationBarItems(leading:) in order to put in the "add theme" ability
