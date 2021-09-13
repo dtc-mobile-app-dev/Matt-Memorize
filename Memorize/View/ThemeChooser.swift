@@ -59,34 +59,3 @@ struct ThemeChooser: View {
         TapGesture().onEnded { themeToEdit = theme }
     }
 }
-
-//    struct ThemeListItem: View {
-//        var theme: Theme<String>
-//
-//        var body: some View {
-//            VStack {
-//                themeName
-//                pairsOfCards
-//                emojis
-//            }
-//            .background(Color(rgbaColor: storeFront.themes[theme].color))
-//        }
-//
-//        var themeName: some View {
-//            Text("\(theme.themeName)")
-//        }
-//
-//        var pairsOfCards: some View {
-//            Text("\(theme.pairsOfCards)")
-//        }
-//
-//        var emojis: some View {
-//            Text(theme.content.joined())
-//        }
-//    }
-
-//struct ThemeChooser_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ThemeChooser(theme: Themes.themes [4])
-//    }
-//}
