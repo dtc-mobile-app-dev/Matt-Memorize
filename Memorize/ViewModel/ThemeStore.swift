@@ -30,7 +30,7 @@ class ThemeStore<CardContent: Codable> : ObservableObject {
                let decodedThemes = try? JSONDecoder().decode(Array<Theme<CardContent>>.self, from: jsonData) {
                 themes = decodedThemes
             }
-    }
+        }
     
     init(named name: String) where CardContent == String {
         self.name = name
