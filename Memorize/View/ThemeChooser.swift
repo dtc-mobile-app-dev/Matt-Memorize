@@ -58,7 +58,8 @@ struct ThemeChooser: View {
     func tap(_ theme: Theme<String>) -> some Gesture {
         TapGesture().onEnded { themeToEdit = theme }
     }
-    
+}
+
 //    struct ThemeListItem: View {
 //        var theme: Theme<String>
 //
@@ -89,4 +90,3 @@ struct ThemeChooser: View {
 //        ThemeChooser(theme: Themes.themes [4])
 //    }
 //}
-}
