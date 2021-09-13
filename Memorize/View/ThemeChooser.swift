@@ -34,11 +34,9 @@ struct ThemeChooser: View {
                 }
             }
             .navigationTitle("Memorize")
+            .navigationBarItems(leading: , trailing: EditButton())
             .navigationBarTitleDisplayMode(.inline)
 //          switch to navigationBarItems(leading:) in order to put in the "add theme" ability
-            .toolbar {
-                ToolbarItem { EditButton() }
-            }
             .environment(\.editMode, $editMode)
             .sheet(item: $themeToEdit) { theme in
                 ThemeEditor(theme: $storeFront.themes[theme])
