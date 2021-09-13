@@ -34,7 +34,10 @@ struct ThemeChooser: View {
                 }
             }
             .navigationTitle("Memorize")
-            .navigationBarItems(leading: , trailing: EditButton())
+            .navigationBarItems(leading: Button(action: {
+//                insert new theme here
+                
+            } ){Image(systemName: "plus.circle")}, trailing: EditButton())
             .navigationBarTitleDisplayMode(.inline)
 //          switch to navigationBarItems(leading:) in order to put in the "add theme" ability
             .environment(\.editMode, $editMode)
