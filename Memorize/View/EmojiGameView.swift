@@ -166,15 +166,15 @@ struct CardView: View {
     }
 }
     
-    private func font(in size: CGSize) -> Font {
-        Font.system(size: min(size.width, size.height) * DrawingConstants.fontScale)
-    }
+private func font(in size: CGSize) -> Font {
+    Font.system(size: min(size.width, size.height) * DrawingConstants.fontScale)
+}
     
-    private struct DrawingConstants {
-        static let fontScale: CGFloat = 0.65
-        static let circlePadding: CGFloat = 4
-        static let fontSize: CGFloat = 32
-    }
+private struct DrawingConstants {
+    static let fontScale: CGFloat = 0.65
+    static let circlePadding: CGFloat = 4
+    static let fontSize: CGFloat = 32
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
