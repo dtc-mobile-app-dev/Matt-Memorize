@@ -159,7 +159,7 @@ struct CardView: View {
                 }
             .modifier(Cardify(isFaceUp: card.isFaceUp))
             }
-        }
+    }
     
     private func scale(thatFits size: CGSize) -> CGFloat {
         min(size.width, size.height) / (DrawingConstants.fontSize / DrawingConstants.fontScale)
