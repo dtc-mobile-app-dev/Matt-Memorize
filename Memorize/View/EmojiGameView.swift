@@ -20,8 +20,8 @@ struct EmojiGameView: View {
                 score
                 gameBody
                 HStack {
-//                    newGame
-//                    Spacer()
+                    newGame
+                    Spacer()
                     shuffle
                 }
                 .padding(.horizontal)
@@ -101,14 +101,14 @@ struct EmojiGameView: View {
         }
     }
     
-//    var newGame: some View {
-//        Button("New Game") {
-//            withAnimation {
-//                dealt = []
-//                game.newGame()
-//            }
-//        }
-//    }
+    var newGame: some View {
+        Button("New Game") {
+            withAnimation {
+                dealt = []
+                game.newGame()
+            }
+        }
+    }
     
     var score: some View {
         Text("Score: \(game.score)")
