@@ -88,7 +88,7 @@ struct EmojiGameView: View {
             for card in game.cards {
                 withAnimation(dealAnimation(for: card)) {
                         deal(card)
-                    }
+                }
             }
         }
     }
